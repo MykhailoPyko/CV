@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <title></title>
+  <title>CV</title>
 </head>
 
 <body>
@@ -109,7 +109,18 @@
       </div>
     </section>
   </main>
-  <script src="https://mykhailopyko.github.io/CV/scripts/script.js"></script>
+  <script>
+function scrollBanner() {
+    let scrollPos;
+    let headerText = document.querySelector('.header-paralax h1');
+    scrollPos = window.scrollY;
+
+    if (scrollPos <= 600) {
+        headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
+        headerText.style.opacity = 1 - (scrollPos / 600);
+    }
+}
+window.addEventListener('scroll', scrollBanner);</script>
 </body>
 
 </html>

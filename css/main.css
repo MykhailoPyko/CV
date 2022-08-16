@@ -1,0 +1,420 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header-paralax {
+    background-image: url(https://mykhailopyko.github.io/CV/images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-paralax h1 {
+    text-align: center;
+    color: black;
+    font-family: 'Permanent Marker',
+        cursive;
+    letter-spacing: 0.16em;
+    font-size: 8em;
+    opacity: 0;
+    animation: ani 2.7s forwards;
+    animation-delay: 1s;
+}
+
+.header-paralax span {
+    font-size: 0.5em;
+    letter-spacing: 0.13em;
+}
+
+.scroll-wrapper {
+    opacity: 0;
+    animation: ani 2.7s forwards;
+    animation-delay: 3s;
+    position: absolute;
+    top: 90%;
+}
+
+.scroll {
+    padding: 10px 8px 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.212);
+    height: 47px;
+    animation-delay: 4s;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-timing-function: ease;
+}
+
+
+main {
+    background: #cad5e1;
+    height: 100%;
+    position: relative;
+    top: 100%;
+
+}
+
+
+.content-wrapper {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.content-img {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-text {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 200px;
+}
+
+.text-portfolio h2 {
+    color: black;
+    font-family: 'Permanent Marker',
+        cursive;
+    font-size: 1.5em;
+}
+
+.text-portfolio img {
+    height: 30px;
+}
+
+.btn {
+    display: inline-block;
+    color: #000;
+    font-family: 'Permanent Marker',
+        cursive;
+    font-size: 1.4em;
+    padding: 32px;
+    position: relative;
+}
+
+.btn__circle,
+.btn__text,
+.btn__white-circle {
+    position: absolute;
+}
+
+.btn__circle {
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 100%;
+    width: 100%;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0);
+    transition: 0.3s linear;
+}
+
+.btn__white-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #000;
+    display: flex;
+    transition: 0.3s ease-in-out;
+}
+
+.btn__white-circle img {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}
+
+.btn__text {
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 2;
+    padding: 24px 8px;
+    transition: 0.3s linear;
+}
+
+.btn:hover .btn__circle {
+    transform: scale(0);
+}
+
+.btn:hover .btn__white-circle {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn:hover .btn__text {
+    transform: translate(40px, -50%);
+}
+
+.text-about {
+    padding: 7px 13px 8px 10px;
+    border-left: 4px solid #000;
+    background-image: linear-gradient(#000, #000);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.8s;
+}
+
+.text-about:hover {
+    background-size: 100% 100%;
+}
+
+.text-about:hover h2 {
+    color: #fff;
+}
+
+.text-about:hover p {
+    color: rgb(216, 216, 216);
+}
+
+.text-block img {
+    height: 30px;
+}
+
+.text-block h2 {
+    transition: color 0.8s;
+    color: black;
+    font-family: 'Permanent Marker',
+        cursive;
+    font-size: 1.5em;
+}
+
+.text-block p {
+    transition: color 0.8s;
+    color: rgb(55, 55, 55);
+    font-family: 'Permanent Marker',
+        cursive;
+    font-size: 1.2em;
+}
+
+.content-photo {
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.contact {
+    background: #cad5e1;
+    background-image: url(https://mykhailopyko.github.io/CV/images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    border-radius: 10%;
+    text-align: center;
+    padding: 50px 0;
+    color: black;
+    font-family: 'Permanent Marker',
+        cursive;
+    letter-spacing: 0.16em;
+    font-size: 6em;
+    opacity: 0;
+    animation: ani 2.7s forwards;
+    animation-delay: 1s;
+    height: 350px;
+    width: 800px;
+    background-color: #cad5e1a0;
+}
+
+.contact-links {
+    height: 220px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-link {
+    height: 50px;
+}
+
+.contact-link:hover {
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-name: icon;
+    animation-timing-function: ease-out;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(12px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes icon {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1280px) {
+    .content-wrapper {
+        gap: 80px;
+        width: 860px;
+    }
+}

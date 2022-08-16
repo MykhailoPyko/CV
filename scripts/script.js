@@ -1,11 +1,1 @@
-function scrollBanner() {
-    let scrollPos;
-    let headerText = document.querySelector('.header-paralax h1');
-    scrollPos = window.scrollY;
 
-    if (scrollPos <= 600) {
-        headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
-        headerText.style.opacity = 1 - (scrollPos / 600);
-    }
-}
-window.addEventListener('scroll', scrollBanner);

@@ -18,7 +18,9 @@
 
 <body>
   <header class="header-paralax">
-    <h1><span>Hi, I'm <br></span> Mykhailo Pyko <br><span>Front-end Developer</span></h1>
+    <div class="header-wrapper">
+      <h1><span>Hi, I'm <br></span> Mykhailo Pyko <br><span>Front-end Developer</span></h1>
+    </div>
     <div class="scroll-wrapper"><a href="#content"><img class="scroll"
           src="https://mykhailopyko.github.io/CV/images/arrow-down.svg" alt="scroll down"></a></div>
   </header>
@@ -110,6 +112,20 @@
       </div>
     </section>
   </main>
+  <script>
+    function scrollBanner() {
+      var scrollPos;
+      var headerText = document.querySelector('.header-wrapper');
+      scrollPos = window.scrollY;
+
+      if (scrollPos <= 600) {
+        headerText.style.transform = "translateY(" + (-scrollPos / 3) + "px" + ")";
+        headerText.style.opacity = 1 - (scrollPos / 600);
+      }
+    }
+
+    window.addEventListener('scroll', scrollBanner);
+  </script>
 </body>
 
 </html>
